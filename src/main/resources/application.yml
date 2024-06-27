@@ -1,0 +1,35 @@
+#端口
+server:
+    port: 4627
+
+
+spring:
+    # 启动名称
+    application:
+        name: MyLog
+    # MySQL数据源配置
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/mylog?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+        username: root
+        type: com.zaxxer.hikari.HikariDataSource
+        password: 123456
+    data:
+        # Redis 配置
+        redis:
+            database: 0
+            host: localhost
+            password: 123456
+            timeout: 6000
+            port: 6379
+        # JPA 配置
+        jpa:
+            database: mysql
+            database-platform: org.hibernate.dialect.MySQL57Dialect
+            show-sql: true
+            hibernate:
+                ddl-auto: create
+                
+      
+    
+    
